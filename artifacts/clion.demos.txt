@@ -10,7 +10,7 @@ C:/Program Files/JetBrains/CLion 193.4778.13/bin/gdb/renderers
 https://www.jetbrains.com/help/clion/how-to-use-wsl-development-environment-in-clion.html
 https://confluence.jetbrains.com/display/CLION/WSL+dev+environment+configuration
 WSL script: wsl_ubuntu_setup_env.sh
-
+j@localhost -p2222
 
 ----- Docker  ----
 docker build -t vromanik/remote-cpp-env:0.2 -f Dockerfile.remote-cpp-env .
