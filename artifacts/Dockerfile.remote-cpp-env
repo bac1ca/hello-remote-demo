@@ -1,0 +1,24 @@
+FROM ubuntu:18.04
+
+RUN apt-get update \
+  && apt-get install -y openssh-server \
+      build-essential \
+      gcc \
+      g++ \
+      clang \
+      cmake \
+      rsync \
+      python \
+  && apt-get clean
+
+RUN ( \
+    echo 'LogLevel DEBUG2'; \
+    echo 'PermitRootLogin yes'; \
+    echo 'PasswordAuthentication yes'; \
+  ) > /etc/ssh/sshd_config_test_clion \
+  && mkdir /run/sshd
+
+RUN useradd -m user \
+  && yes 1 | passwd user
+
+CMD ["/usr/sbin/sshd", "-D", "-e", "-f", "/etc/ssh/sshd_config_test_clion"]
