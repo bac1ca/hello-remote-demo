@@ -21,6 +21,9 @@ int main()  {
     std::cout << "OS: WINDOWS" << std::endl;
 #endif
 
+    int value = 1; // change me
+    std::cout << "value = " << value << std::endl;
+
     return 0;
 }
 
