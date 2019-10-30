@@ -17,6 +17,10 @@ docker build -t vromanik/remote-cpp-env:0.2 -f Dockerfile.remote-cpp-env .
 docker run -d -p2222:22 vromanik/remote-cpp-env:0.2
 ssh-keygen -f "/home/vasily.romanikhin/.ssh/known_hosts" -R "[localhost]:2222"
 
+----- Remote GDB Server ------
+gdbserver :1234 /home/k/CLion/debug/hello_remote_demo
+localhost:1234
+
 
 ---- VMS ----------
 k@10.0.2.4 -p2244   // Linux
