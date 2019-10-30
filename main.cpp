@@ -8,7 +8,9 @@ void readProcInfo();
 int main()  {
     struct utsname name{};
     if(uname(&name)) exit(-1);
-    std::cout << "Hello!!! Your computer's OS is " << name.sysname << " " << name.release << std::endl;
+    std::cout << "Hello!!! Your computer's OS is "
+        << name.sysname << " "
+        << name.release << std::endl;
 
 #if defined(__APPLE__) && defined(__MACH__)
     std::cout << "OS: APPLE" << std::endl;
