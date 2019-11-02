@@ -19,6 +19,7 @@ RUN apt-get update \
       clang \
       cmake \
       rsync \
+      tar \
       python \
   && apt-get clean
 
